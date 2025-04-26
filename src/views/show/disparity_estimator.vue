@@ -34,15 +34,16 @@
     axios.post(`${serverUrl}/d_estimator/start_cameras`).then((response) => {
       console.log(response.data);
     })
-    axios.post()
+    // axios.post()
   };
 
   // 停止摄像头
   const stopStreaming = () => {
     // TODO: 实现停止摄像头的逻辑
     // console.log("停止摄像头");
+    camera1Url.value = ''
     axios.post(`${serverUrl}/d_estimator/stop_cameras`).then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
     })
   };
   </script>
@@ -74,7 +75,7 @@
   
   /* 每个摄像头的卡片 */
   .video-card {
-    width: 45%;
+    width: 82%;
     text-align: center;
   }
   

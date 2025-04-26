@@ -25,7 +25,7 @@
   
   
   // 摄像头流地址
-  const camera1Url = ref(`${serverUrl}/g_recognition/video_feed`);
+ let camera1Url = ref(`${serverUrl}/g_recognition/video_feed`);
   
 
 
@@ -37,13 +37,14 @@
     axios.post(`${serverUrl}/g_recognition/start_cameras`).then((response) => {
       console.log(response.data);
     })
-    axios.post()
+    // axios.post()
   };
 
   // 停止摄像头
   const stopStreaming = () => {
     // TODO: 实现停止摄像头的逻辑
     // console.log("停止摄像头");
+    camera1Url = '';
     axios.post(`${serverUrl}/g_recognition/stop_cameras`).then((response) => {
       console.log(response.data);
     })
@@ -77,7 +78,7 @@
   
   /* 每个摄像头的卡片 */
   .video-card {
-    width: 45%;
+    width: 62%;
     text-align: center;
   }
   

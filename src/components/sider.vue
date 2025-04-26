@@ -8,10 +8,38 @@
             class="el-menu-vertical-demo"
             @select="handleSelect"
           >
-            <el-menu-item index="scan">实时检测</el-menu-item>
-            <el-menu-item index="record">操作记录</el-menu-item>
-            <el-menu-item index="demonstrate">说明文档</el-menu-item>
-            <el-menu-item index="login">重新登录</el-menu-item>
+            <el-menu-item index="scan" >
+              <el-icon>
+                <FullScreen></FullScreen>
+              </el-icon>
+              <template #title>
+                实时监测
+              </template>  
+            </el-menu-item>
+            <el-menu-item index="record">
+              <el-icon>
+                <Clock></Clock>
+              </el-icon>
+              <template #title>
+                操作记录
+              </template> 
+            </el-menu-item>
+            <el-menu-item index="demonstrate">
+              <el-icon>
+                <QuestionFilled></QuestionFilled>
+              </el-icon>
+              <template #title>
+                说明文档
+              </template> 
+            </el-menu-item>
+            <el-menu-item index="login">
+              <el-icon>
+                <Avatar></Avatar>
+              </el-icon>
+              <template #title>
+                重新登录
+              </template> 
+            </el-menu-item>
           </el-menu>
         </el-aside>
       </el-container>
@@ -21,6 +49,13 @@
   <script setup>
   import { ElContainer, ElAside, ElMain, ElMenu, ElMenuItem } from 'element-plus'
   import { defineEmits } from 'vue';
+  import {
+  QuestionFilled,
+  FullScreen,
+  Clock,
+  Avatar
+} from '@element-plus/icons-vue'
+
   const emit = defineEmits(['login','scan','record','demonstrate'])
   const handleSelect = (index) => {
     console.log('选中的菜单项：', index)
@@ -48,6 +83,8 @@
   
   .el-menu-item {
     background-color: #e4edef19;
+    
+    justify-content: center;
   }
 
   .sidebar {

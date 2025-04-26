@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/amap-js-api": "^1.4.16",
     "axios": "^1.7.9",
     "element-plus": "^2.9.3",
     "github-markdown-css": "^5.8.1",

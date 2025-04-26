@@ -57,11 +57,11 @@ watch(
           <el-main style="overflow: auto">
             <router-view style="width: 100%; height: 100%"></router-view>
           </el-main>
-          <el-footer>
+          <!-- <el-footer>
             <div class="footer-content">
               <p>© 2025 基于深度学习的室内障碍物感知系统 | 所有权归项目团队所有</p>
             </div>
-          </el-footer>
+          </el-footer> -->
         </el-container>
       </el-container>
     </el-container>
@@ -82,7 +82,7 @@ watch(
 }
 
 .el-aside {
-  width: 15%; /* 改用固定宽度 */
+  width: 10%; /* 改用固定宽度 */
   background-color: #ffffff;
   height: 100%; /* 继承父容器高度 */
 }

@@ -4,7 +4,7 @@
         <!-- 左侧 Logo 和标题 -->
         <div class="header-left">
           
-          <span class="project-name">基于深度学习的室内障碍物感知系统</span>
+          <span class="project-name">基于视觉感知的盲人安全监控系统</span>
         </div>
   
         <!-- 中间导航菜单 -->
@@ -14,7 +14,13 @@
           :default-active="activeMenu"
           @select="handleMenuSelect"
         >
-          <el-menu-item index="home">首页</el-menu-item>
+          <el-menu-item index="home">
+            <el-icon>
+              <Homefilled></Homefilled>
+            </el-icon>
+            <template #title>
+              首页
+            </template></el-menu-item>
           <el-menu-item index="about">关于我们</el-menu-item>
         </el-menu>
   
@@ -47,6 +53,9 @@
   import { ref } from 'vue'
   import { ElHeader, ElMenu, ElMenuItem, ElDropdown, ElDropdownMenu, ElDropdownItem, ElAvatar, ElIcon } from 'element-plus'
   import { defineEmits } from 'vue';
+  import {
+    HomeFilled
+  } from  '@element-plus/icons-vue'
   const activeMenu = ref('1')
   
   const emit = defineEmits(['home', 'about'])

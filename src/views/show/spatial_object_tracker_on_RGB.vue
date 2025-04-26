@@ -25,7 +25,7 @@ const serverUrl = "http://127.0.0.1:5000";
 
 
 // 摄像头流地址
-const camera1Url = ref(`${serverUrl}/s_RGB/video_feed1`);
+const camera1Url = ref(`${serverUrl}/s_RGB/video_feed`);
 
 
 
@@ -33,17 +33,20 @@ const camera1Url = ref(`${serverUrl}/s_RGB/video_feed1`);
 const startStreaming = () => {
   // TODO: 实现开启摄像头的逻辑
   // console.log("开启摄像头");
-  camera1Url.value = `${serverUrl}/s_RGB/video_feed1`;
+  camera1Url.value = `${serverUrl}/s_RGB/video_feed`;
   axios.post(`${serverUrl}/s_RGB/start_cameras`).then((response) => {
     console.log(response.data);
   })
-  axios.post()
+  // axios.post()
 };
 
 // 停止摄像头
 const stopStreaming = () => {
   // TODO: 实现停止摄像头的逻辑
   // console.log("停止摄像头");
+
+  camera1Url.value = ''
+
   axios.post(`${serverUrl}/s_RGB/stop_cameras`).then((response) => {
     console.log(response.data);
   })
@@ -63,8 +66,8 @@ const stopStreaming = () => {
   background-color: #409eff;
   color: white;
   text-align: center;
-  font-size: 20px;
-  padding: 10px;
+  font-size: 15px;
+  padding: 1px;
 }
 
 /* 视频区域 */
@@ -77,7 +80,7 @@ const stopStreaming = () => {
 
 /* 每个摄像头的卡片 */
 .video-card {
-  width: 45%;
+  width: 50%;
   text-align: center;
 }
 

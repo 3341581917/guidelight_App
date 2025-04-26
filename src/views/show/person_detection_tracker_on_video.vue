@@ -40,13 +40,15 @@
     axios.post(`${serverUrl}/p_video/start_cameras`).then((response) => {
       console.log(response.data);
     })
-    axios.post()
+    // axios.post()
   };
 
   // 停止摄像头
   const stopStreaming = () => {
     // TODO: 实现停止摄像头的逻辑
     // console.log("停止摄像头");
+    camera1Url.value = ''
+
     axios.post(`${serverUrl}/p_video/stop_cameras`).then((response) => {
       console.log(response.data);
     })

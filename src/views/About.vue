@@ -11,7 +11,7 @@
       <!-- Main Content Section -->
       <el-container style="padding: 20px;">
         <el-row gutter={20}>
-          <el-col :span="12">
+          <el-col :span="24">
             <div class="section">
               <h2>我们的使命</h2>
               <p>我们的使命是通过创新和技术改变世界，为用户提供更高效、更智能的解决方案。</p>
@@ -23,14 +23,14 @@
             </div>
           </el-col>
           
-          <el-col :span="12">
+          <el-col :span="36">
             <div class="section">
               <h2>我们的团队</h2>
               <p>我们是一支由多元化背景的人才组成的团队，拥有共同的目标：实现技术创新并创造更好的用户体验。</p>
               <ul>
                 <li><strong>赵耀：</strong>团队队长，主导了项目的算法研究，擅长构建算法，即时确立针对于问题的技术路线</li>
                 <li><strong>王子舒：</strong>前后端开发，擅长系统架构和性能优化，构建高效友好的用户界面。</li>
-                <li><strong>：</strong>主笔，关于论文撰写与专利、软著等的文本工作，擅长文本表现</li>
+                <li><strong>李婉茹：</strong>主笔，关于论文撰写与专利、软著等的文本工作，擅长文本表现</li>
               </ul>
             </div>
           </el-col>

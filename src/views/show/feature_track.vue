@@ -37,11 +37,11 @@ const camera2Url = ref(`${serverUrl}/f_track/video_feed_2`);
 const startStreaming = () => {
   // TODO: 实现开启摄像头的逻辑
   // console.log("开启摄像头");
-  // camera1Url.value = `${serverUrl}/g_recognition/video_feed`; // 原开启摄像头用
+  camera1Url.value = `${serverUrl}/g_recognition/video_feed`; // 原开启摄像头用
   axios.post(`${serverUrl}/g_recognition/start_cameras`).then((response) => {
     console.log(response.data);
   })
-  axios.post()
+  // axios.post()
 };
 
 
@@ -49,6 +49,8 @@ const startStreaming = () => {
 const stopStreaming = () => {
   // TODO: 实现停止摄像头的逻辑
   // console.log("停止摄像头"); // 验证消息
+  camera1Url.value = ''
+
   axios.post(`${serverUrl}/g_recognition/stop_cameras`).then((response) => {
     console.log(response.data);
   })

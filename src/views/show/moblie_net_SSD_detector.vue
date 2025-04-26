@@ -36,17 +36,19 @@
   const startStreaming = () => {
     // TODO: 实现开启摄像头的逻辑
     // console.log("开启摄像头");
+    
     camera1Url.value = `${serverUrl}/m_detector/video_feed`;
     axios.post(`${serverUrl}/m_detector/start_cameras`).then((response) => {
       console.log(response.data);
     })
-    axios.post()
+    // axios.post()
   };
 
   // 停止摄像头
   const stopStreaming = () => {
     // TODO: 实现停止摄像头的逻辑
     // console.log("停止摄像头");
+    camera1Url.value = ''
     axios.post(`${serverUrl}/m_detector/stop_cameras`).then((response) => {
       console.log(response.data);
     })
